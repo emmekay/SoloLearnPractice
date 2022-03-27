@@ -132,8 +132,35 @@ class Juice:
 
 a = Juice('Orange', 1.5)
 b = Juice('Apple', 2.0)
-
-
-
 result =( a.name + "&" + b.name )+ " " + "(" + ( str(a.capacity + b.capacity )) + "L" + ")"
 print(result)
+#Phone Validator using Regex
+#You are given a number input, and need to check if it is a valid phone number.
+#A valid phone number has exactly 8 digits and starts with 1, 8 or 9.
+#Output "Valid" if the number is valid and "Invalid", if it is not.
+import re
+
+#phone = input("Enter an 8 digit number starting with 1, 8 or 9= ")
+phone = ("18937656", "67829", "18926737", "93928473", "48787987") #list of phone numbers
+regex =r"^[189][0-9]{7}$"
+for r in phone:
+    match = re.match(regex, r)
+    if match:
+        print("Valid")
+    else:
+        print("Invalid")
+
+#Phone validator without list 
+import re
+#your code goes here
+#phone = input()
+phone="18762564"
+regex =r"^[189][0-9]{7}$"
+match = re.match(regex, phone)
+if match:
+    print("Valid")
+else:
+    print("Invalid")
+
+
+
