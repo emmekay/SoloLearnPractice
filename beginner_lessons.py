@@ -1,5 +1,8 @@
 #Exponentiation
 #Write program to calculate the amount that will result from doubling 
+from ast import arg
+
+
 result = 0.01*(2**30)
 print(result)
 
@@ -96,3 +99,8 @@ def search(text,word):
         pass
 
 print(search(text, word))
+
+def function(named_arg, *args):
+    print(named_arg)
+    print(arg)
+function(1, 2, 3, 4, 5)
