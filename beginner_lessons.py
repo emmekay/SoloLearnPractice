@@ -100,7 +100,3 @@ def search(text,word):
 
 print(search(text, word))
 
-def function(named_arg, *args):
-    print(named_arg)
-    print(arg)
-function(1, 2, 3, 4, 5)

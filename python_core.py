@@ -162,5 +162,13 @@ if match:
 else:
     print("Invalid")
 
+#def function(named_arg, *args):
+#    print(named_arg)
+#    print(arg)
+#function(1, 2, 3, 4, 5)
 
-
+#Default Values 
+def function(x, y, food="spam"):
+    print(food)
+function(1, 2) #will output 'spam' as default since no food defined
+function(3, 4, "egg") #prints 'egg'
