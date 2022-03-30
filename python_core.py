@@ -162,13 +162,63 @@ if match:
 else:
     print("Invalid")
 
-#def function(named_arg, *args):
-#    print(named_arg)
-#    print(arg)
-#function(1, 2, 3, 4, 5)
+
+#Zen of Python
+#import this #way to print principles of programming
+
+#Function Arguments 
+#*args to pass an arbitrary number of arguments to that function.  The argument is accessible as the tuple args. 
+def function(named_arg, *args):
+    print(named_arg)
+    print(args)
+
+function(1, 2, 3, 4, 5)
 
 #Default Values 
 def function(x, y, food="spam"):
     print(food)
 function(1, 2) #will output 'spam' as default since no food defined
 function(3, 4, "egg") #prints 'egg'
+
+#Keyword Arguments - 
+# **kwargs - handle named argument that are not defined in advance 
+def my_func(x, y=7, *args, **kwargs):
+    print(kwargs)
+my_func(2, 3, 4, 5, 6, a=7, b=8)
+
+#Tuple Unpacking
+#Allows you to assign each item in an iterable to a variable.
+numbers = (1, 2, 3)
+a, b, c = numbers 
+print(a)
+print(b, c)
+
+#A variable that is prefaced with asterisk takes all values from the iterable that are left over from the other variables
+a, b, *c, d = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a)
+print(b)
+print(c)
+print(d)
+
+#Ternary Operator 
+#Provide if statement functionality with less code - don't overuse
+a = 7 
+b = 1 if a >= 5 else 42
+print(b)
+
+status = 1
+msg = "Logout" if status == 1 else "Login"
+print(msg)
+
+#Else Statements 
+for i in range(10):
+    if i == 999: 
+        break
+else:
+        print("Unbroken 1")
+for i in range(10):
+    if i == 5:
+        print("For loop finished abnormally")
+        break
+else:
+    print("Unbroken 2")
