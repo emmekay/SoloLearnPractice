@@ -138,6 +138,7 @@ print(result)
 #You are given a number input, and need to check if it is a valid phone number.
 #A valid phone number has exactly 8 digits and starts with 1, 8 or 9.
 #Output "Valid" if the number is valid and "Invalid", if it is not.
+from csv import excel_tab
 import re
 
 #phone = input("Enter an 8 digit number starting with 1, 8 or 9= ")
@@ -222,3 +223,35 @@ for i in range(10):
         break
 else:
     print("Unbroken 2")
+
+#Try/Except Statements
+print("Calculate: 1/2")
+try:
+    print(1/2)
+except ZeroDivisionError:
+    print("Error: Can't divide by zero")
+else:
+    print("Division succeeded")
+print("Calculate: 1/0")
+try:
+    print(1/0)
+except ZeroDivisionError:
+    print("Error: Can't divide by zero")
+else:
+    print("Division succeeded")
+
+#Another example
+try:
+    print(1)
+    print(1 + "1" == 2)
+    print(2)
+except TypeError:
+    print("Error: Type Error")
+else:
+    print("Success")
+
+#Concatenate w/ Args
+def concatenate(*args, sep = "-"):
+    return sep.join(args)
+
+print(concatenate("I", "love", "Python", "!", sep= "-"))
